@@ -43,13 +43,13 @@ public class Boot : MonoBehaviour
 
     private void Update()
     {
-        if (!canKick) return;
-
         if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
             MoveLeft();
 
         if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
             MoveRight();
+        
+        if (!canKick) return;
 
         if (Input.GetMouseButton(0))
             TryKick();
