@@ -27,6 +27,13 @@ public class DollController : MonoBehaviour
     private void Awake()
     {
         Boot.OnKickAnimationFinished += OnKickFinished;
+        Boot.OnDollKicked += OnDollKicked;
+    }
+
+    private void OnDollKicked(int dollIndex)
+    {
+        Doll doll = currentDolls[dollIndex];
+        Destroy(doll.gameObject);
     }
 
     private void OnKickFinished()
