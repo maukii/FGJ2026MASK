@@ -6,7 +6,10 @@ using UnityEngine;
 
 public class DollController : MonoBehaviour
 {
+    public static event Action OnCorrectDollKicked;
+    public static event Action OnWrongDollKicked;
     public static event Action OnRerollCompleted;
+    public static event Action OnTutorialCompleted;
 
     [SerializeField] private Doll dollPrefab;
     [SerializeField] private List<Transform> spawnPoints;
@@ -23,6 +26,7 @@ public class DollController : MonoBehaviour
 
     private List<Doll> currentDolls = new List<Doll>();
     private int currentImposterIndex;
+    public bool tutorial = true;
 
 
     private void Awake()
@@ -34,37 +38,54 @@ public class DollController : MonoBehaviour
     private void OnDollKicked(int dollIndex)
     {
         Doll doll = currentDolls[dollIndex];
-
         Debug.Log("Result: " + (doll.IsImposter ? "success" : "failure"));
+        
+        if (doll.IsImposter && tutorial)
+        {
+            tutorial = false;
+            OnTutorialCompleted?.Invoke();
+        }
 
+        if (doll.IsImposter)
+        {
+            OnCorrectDollKicked?.Invoke();
+        }
+        else
+        {
+            OnWrongDollKicked?.Invoke();
+        }
+        
         Destroy(doll.gameObject);
     }
 
     private void OnKickFinished()
     {
         AnimateExit(currentDolls);
-        currentDolls = SpawnDolls();
+        currentDolls = SpawnDolls(tutorial);
         AnimateEnter(currentDolls);
     }
 
-    private void Start()
+    public void SpawnTutorialRound()
     {
-        currentDolls = SpawnDolls();
+        currentDolls = SpawnDolls(true);
         AnimateEnter(currentDolls);
     }
 
-    private List<Doll> SpawnDolls()
+    private List<Doll> SpawnDolls(bool tutorial = false)
     {
         List<Doll> dolls = new List<Doll>();
 
         currentImposterIndex = UnityEngine.Random.Range(0, 4);
-        int headIndex = UnityEngine.Random.Range(0, 4);
+        int headIndex = UnityEngine.Random.Range(0, 5);
+
+        Debug.Log("current imposter index: " + currentImposterIndex);
+        Debug.Log("head index: " + headIndex);
 
         for (int i = 0; i < spawnPoints.Count; i++)
         {
             Transform spawnPoint = spawnPoints[i];
             Doll doll = Instantiate(dollPrefab, spawnPoint.position, Quaternion.identity);
-            doll.Initialize(i, headIndex, i == currentImposterIndex);
+            doll.Initialize(i, headIndex, i == currentImposterIndex, tutorial);
             dolls.Add(doll);
         }
 

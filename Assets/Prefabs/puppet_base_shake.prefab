@@ -816,6 +816,7 @@ MonoBehaviour:
   - {fileID: 7865813082861279993}
   - {fileID: 5334813514041121528}
   - {fileID: 5397623424534069351}
+  - {fileID: 7975217814543607574}
   masks:
   - {fileID: 800847154362712726}
   - {fileID: 2968808469753455524}
@@ -834,7 +835,6 @@ MonoBehaviour:
   - {fileID: 7333781226292372383}
   - {fileID: 1967539197926258191}
   - {fileID: 3911785162038327366}
-  - {fileID: 7975217814543607574}
   shakeDuration: 0.1
   shakeStrength: 0.1
 --- !u!1 &2968808469753455524
@@ -2588,7 +2588,7 @@ GameObject:
   - component: {fileID: 5671913718949474628}
   - component: {fileID: 7879454002562203265}
   m_Layer: 0
-  m_Name: shockedFace Copy
+  m_Name: Head_shocked
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -1,9 +1,11 @@
 using UnityEngine;
 using TMPro;
 using System;
+using DG.Tweening;
 
 public class GameTimer : MonoBehaviour
 {
+    [SerializeField] private GameObject timerUI;
     [SerializeField] private TextMeshProUGUI timerLabel;
     [SerializeField] private int startTimeSeconds = 180;
 
@@ -15,7 +17,17 @@ public class GameTimer : MonoBehaviour
 
     private void Awake() => ResetTimer();
 
-    public void StartTimer()
+    private void Start()
+    {
+        timerUI.transform.localScale = Vector3.zero;
+    }
+
+    public void ShowAndStart()
+    {
+        timerUI.transform.DOScale(Vector3.one, 0.5f).SetEase(Ease.OutBack).OnComplete(StartTimer);
+    }
+
+    private void StartTimer()
     {
         if (isRunning)
             return;

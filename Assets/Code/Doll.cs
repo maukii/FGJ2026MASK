@@ -16,7 +16,7 @@ public class Doll : MonoBehaviour
     public int DollIndex { get; private set; }
 
 
-    public void Initialize(int dollIndex, int headIndex, bool isImposter)
+    public void Initialize(int dollIndex, int headIndex, bool isImposter, bool tutorial)
     {
         DollIndex = dollIndex;
         
@@ -47,6 +47,9 @@ public class Doll : MonoBehaviour
         }
 
         heads[finalHeadIndex].SetActive(true);
+
+        if (tutorial) return;
+
         masks[GetRandomMaskIndex()].SetActive(true);
     }
 
