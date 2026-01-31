@@ -22,6 +22,7 @@ public class DollController : MonoBehaviour
     [SerializeField] private Ease tiltBackEase = Ease.OutBack;
 
     private List<Doll> currentDolls = new List<Doll>();
+    private int currentImposterIndex;
 
 
     private void Awake()
@@ -33,6 +34,9 @@ public class DollController : MonoBehaviour
     private void OnDollKicked(int dollIndex)
     {
         Doll doll = currentDolls[dollIndex];
+
+        Debug.Log("Result: " + (doll.IsImposter ? "success" : "failure"));
+
         Destroy(doll.gameObject);
     }
 
@@ -52,9 +56,15 @@ public class DollController : MonoBehaviour
     private List<Doll> SpawnDolls()
     {
         List<Doll> dolls = new List<Doll>();
-        foreach (Transform spawnPoint in spawnPoints)
+
+        currentImposterIndex = UnityEngine.Random.Range(0, 4);
+        int headIndex = UnityEngine.Random.Range(0, 4);
+
+        for (int i = 0; i < spawnPoints.Count; i++)
         {
+            Transform spawnPoint = spawnPoints[i];
             Doll doll = Instantiate(dollPrefab, spawnPoint.position, Quaternion.identity);
+            doll.Initialize(i, headIndex, i == currentImposterIndex);
             dolls.Add(doll);
         }
 

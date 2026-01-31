@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Boot : MonoBehaviour
 {
+    public static Boot Instance { get; private set; }
+
     [SerializeField] private Transform bootParent;
     [SerializeField] private Animator bootAnimator;
     [SerializeField] private Animator beltAnimator;
@@ -19,7 +21,9 @@ public class Boot : MonoBehaviour
 
     public static event Action<int> OnDollKicked;
     public static event Action OnKickAnimationFinished;
+    public static event Action<int> OnBootMoved;
 
+    public int BootHoverIndex => bootPositionIndex;
     private int bootPositionIndex = 0;
     private Tween tween;
     private bool canKick = false;
@@ -27,6 +31,7 @@ public class Boot : MonoBehaviour
 
     private void Awake()
     {
+        Instance = this;
         DollController.OnRerollCompleted += RerollCompleted;
     }
 
@@ -85,6 +90,8 @@ public class Boot : MonoBehaviour
 
         bootPositionIndex--;
         bootPositionIndex = Mathf.Clamp(bootPositionIndex, 0, kickPositions.Count-1);
+        OnBootMoved?.Invoke(bootPositionIndex);
+
         AnimateToIndex();
     }
 
@@ -98,6 +105,8 @@ public class Boot : MonoBehaviour
 
         bootPositionIndex++;
         bootPositionIndex = Mathf.Clamp(bootPositionIndex, 0, kickPositions.Count-1);
+        OnBootMoved?.Invoke(bootPositionIndex);
+
         AnimateToIndex();
     }
 
