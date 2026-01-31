@@ -232,7 +232,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 604, y: 716}
     spritePosition: {x: 184, y: 360}
-  - name: Mask_glassesNose
+  - name: glassesNoseMoFullMask Copy
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -244,7 +244,7 @@ ScriptedImporter:
       y: 908
       width: 144
       height: 96
-    spriteID: 3ca074faf8f088549ab5ba4f316a5f73
+    spriteID: 76e85ee678ee23c44ac9248a97fb6313
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -319,7 +319,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 220, y: 4}
-    spritePosition: {x: 168, y: 288}
+    spritePosition: {x: 168, y: 280}
   - name: Mask_scream
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -968,6 +968,14 @@ ScriptedImporter:
   generatePhysicsShape: 0
   paperDollMode: 0
   keepDupilcateSpriteName: 1
+  generateTileAssets: 0
+  tilePaletteCellLayout: 0
+  tilePaletteHexagonLayout: 0
+  tilePaletteCellSize: {x: 1, y: 1, z: 0}
+  tilePaletteCellSizing: 0
+  transparencySortMode: 0
+  transparencySortAxis: {x: 0, y: 0, z: 1}
+  tileTemplate: {instanceID: 0}
   padding: 4
   spriteSizeExpand: 0
   skeletonAssetReferenceID: 
@@ -1039,12 +1047,12 @@ ScriptedImporter:
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Mask_glassesNose
-    spriteName: Mask_glassesNose
+  - name: glassesNoseMoFullMask Copy
+    spriteName: glassesNoseMoFullMask Copy
     isGroup: 0
     parentIndex: -1
-    spriteID: 3ca074faf8f088549ab5ba4f316a5f73
-    layerID: 888085490
+    spriteID: 76e85ee678ee23c44ac9248a97fb6313
+    layerID: 1199498375
     mosaicPosition: {x: 4, y: 908}
     flatten: 0
     isImported: 1
