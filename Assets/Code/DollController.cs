@@ -11,6 +11,10 @@ public class DollController : MonoBehaviour
     public static event Action OnRerollCompleted;
     public static event Action OnTutorialCompleted;
 
+    [SerializeField] private AudioClip bootMoveAudio;
+    [SerializeField] private AudioClip dollKickedAudio;
+    [SerializeField] private AudioClip conveyerMoveAudio;
+
     [SerializeField] private float particleOffset = 4f;
     [SerializeField] private ParticleSystem explosionParticle;
     [SerializeField] private Doll dollPrefab;
@@ -66,6 +70,7 @@ public class DollController : MonoBehaviour
         
         Vector3 particlePosition = new Vector3(targetPoints[doll.DollIndex].position.x, targetPoints[doll.DollIndex].position.y + particleOffset, -1.75f);
         Instantiate(explosionParticle, particlePosition, Quaternion.identity);
+        AudioSource.PlayClipAtPoint(dollKickedAudio, Vector3.zero);
         Destroy(doll.gameObject);
     }
 
@@ -112,6 +117,8 @@ public class DollController : MonoBehaviour
             t.DOLocalRotate(new Vector3(0f, 0f, tiltAngle), tiltDuration).SetEase(tiltEase)
             .OnComplete(() => t.DOLocalRotate(Vector3.zero, tiltBackDuration).SetEase(tiltBackEase));
         }
+
+        AudioSource.PlayClipAtPoint(conveyerMoveAudio, Vector3.zero);
     }
 
     private void AnimateExit(List<Doll> dolls)

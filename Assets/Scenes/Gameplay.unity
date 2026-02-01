@@ -518,6 +518,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 543450653229789531}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &352475110
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 352475112}
+  - component: {fileID: 352475111}
+  m_Layer: 0
+  m_Name: AudioResponse
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &352475111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 352475110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41573d3ae53495045a4fe865d5605300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rightDollAudio: {fileID: 8300000, guid: 379daa13a674f9942ad4094271d5fd34, type: 3}
+  wrongDollAudio: {fileID: 8300000, guid: a1349b4c4d729eb4ebad5512b9160465, type: 3}
+--- !u!4 &352475112
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 352475110}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &391750126
 GameObject:
   m_ObjectHideFlags: 0
@@ -1389,6 +1435,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b886944045da48c4eaf57ea1fe27c320, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bootMoveAudio: {fileID: 0}
+  dollKickedAudio: {fileID: 0}
+  conveyerMoveAudio: {fileID: 0}
   particleOffset: 3
   explosionParticle: {fileID: 2180759309196565242, guid: 6f6feb192898c4049ac9be008b839b16, type: 3}
   dollPrefab: {fileID: 1387744271374554102, guid: f183a78d22d72744cac8ad66c410425b, type: 3}
@@ -4049,7 +4098,6 @@ MonoBehaviour:
   failShakeDuration: 0.1
   failShakeStrength: 0.15
   canKick: 0
-  mainMenu: 0
 --- !u!33 &8030853061154533860
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4108,3 +4156,4 @@ SceneRoots:
   - {fileID: 517991679}
   - {fileID: 1384062720}
   - {fileID: 527880513}
+  - {fileID: 352475112}

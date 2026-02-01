@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
+    [SerializeField] private AudioClip explostionAudio;
     [SerializeField] private Boot boot;
     [SerializeField] private Doll startGameDoll;
     [SerializeField] private Doll creditsDoll;
@@ -54,6 +55,7 @@ public class MainMenuController : MonoBehaviour
             showCredits = true;
             Vector3 particlePosition = new Vector3(creditsDoll.transform.position.x, creditsDoll.transform.position.y + particleOffset, -1.75f);
             Instantiate(dollExplosionParticle, particlePosition, Quaternion.identity);
+            AudioSource.PlayClipAtPoint(explostionAudio, Vector3.zero);
             Destroy(creditsDoll.gameObject);
         }
     }
