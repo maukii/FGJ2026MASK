@@ -60,7 +60,7 @@ public class Boot : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
             MoveRight();
 
-        if (Input.GetMouseButton(0) || Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
             TryKick();
     }
 
