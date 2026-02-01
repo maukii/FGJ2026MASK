@@ -2,11 +2,13 @@ using UnityEngine;
 using TMPro;
 using System;
 using DG.Tweening;
+using UnityEngine.UI;
 
 public class GameTimer : MonoBehaviour
 {
     [SerializeField] private GameObject timerUI;
     [SerializeField] private TextMeshProUGUI timerLabel;
+    [SerializeField] private Image clockGraphic;
     [SerializeField] private int startTimeSeconds = 180;
 
     public static event Action OnTimerRanOut;
@@ -70,6 +72,12 @@ public class GameTimer : MonoBehaviour
 
     private void UpdateDisplay()
     {
+        timerLabel.transform.DOPunchScale(Vector3.one * 0.5f, 0.1f);
+        timerLabel.transform.DOPunchRotation(Vector3.one * 1.05f, 0.1f);
+
+        clockGraphic.transform.DOPunchScale(Vector3.one * 0.5f, 0.1f).SetDelay(0.5f);
+        clockGraphic.transform.DOPunchRotation(Vector3.one * 1.05f, 0.1f).SetDelay(0.5f);
+
         int minutes = remainingSeconds / 60;
         int seconds = remainingSeconds % 60;
         timerLabel.SetText($"{minutes:00}:{seconds:00}");

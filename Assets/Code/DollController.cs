@@ -11,6 +11,8 @@ public class DollController : MonoBehaviour
     public static event Action OnRerollCompleted;
     public static event Action OnTutorialCompleted;
 
+    [SerializeField] private float particleOffset = 4f;
+    [SerializeField] private ParticleSystem explosionParticle;
     [SerializeField] private Doll dollPrefab;
     [SerializeField] private List<Transform> spawnPoints;
     [SerializeField] private List<Transform> targetPoints;
@@ -55,6 +57,7 @@ public class DollController : MonoBehaviour
             OnWrongDollKicked?.Invoke();
         }
         
+        Instantiate(explosionParticle, targetPoints[doll.DollIndex].position + Vector3.up * particleOffset, Quaternion.identity);
         Destroy(doll.gameObject);
     }
 
