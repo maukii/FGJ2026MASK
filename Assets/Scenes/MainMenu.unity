@@ -506,7 +506,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d6bf9a785b0ebec4e94cdbb347232201, type: 2}
+  - {fileID: 2100000, guid: 7805f81a5898e2d439350b0fda1bef72, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1871,7 +1871,7 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 0.9997727
+    width: 0.99976104
     height: 1
   near clip plane: 0.01
   far clip plane: 1000
