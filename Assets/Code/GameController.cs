@@ -67,4 +67,11 @@ public class GameController : MonoBehaviour
         globalLight.intensity = 1f;
         dollController.SpawnTutorialRound();
     }
+
+    private void OnDestroy()
+    {
+        DollController.OnTutorialCompleted -= TutorialCompleted;
+        DollController.OnWrongDollKicked -= LoseLife;
+        RoundTimer.OnRoundTimerRanOut -= LoseLife;
+    }
 }

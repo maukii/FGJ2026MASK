@@ -27,4 +27,10 @@ public class CameraShake : MonoBehaviour
         cameraTransform.DOPunchPosition(Vector3.one * bigPunchScale, bigPunchDuration);
         cameraTransform.DOPunchRotation(Vector3.forward * bigPunchScale, bigPunchDuration);
     }
+
+    void OnDestroy()
+    {
+        Boot.OnBootMoved -= ShakeSmall;
+        Boot.OnDollKicked -= ShakeBig;
+    }
 }

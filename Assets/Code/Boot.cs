@@ -136,4 +136,10 @@ public class Boot : MonoBehaviour
             tween.Kill(complete);
         }
     }
+
+    void OnDestroy()
+    {
+        DollController.OnRerollCompleted -= RerollCompleted;
+        RoundTimer.OnRoundTimerRanOut -= OnRoundTimeEnded;
+    }
 }
