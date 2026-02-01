@@ -20,6 +20,7 @@ public class GameController : MonoBehaviour
     [SerializeField] private List<Image> healthGraphics = new List<Image>();
 
     private int currentHealth;
+    private bool tutorialCompleted = false;
 
 
     void Awake()
@@ -32,6 +33,8 @@ public class GameController : MonoBehaviour
 
     private void LoseLife()
     {
+        if (!tutorialCompleted) return;
+
         currentHealth--;
 
         healthParentGraphics[currentHealth].transform.DOPunchScale(Vector3.one * 0.25f, 0.35f);
@@ -48,6 +51,8 @@ public class GameController : MonoBehaviour
 
     private void TutorialCompleted()
     {
+        tutorialCompleted = true;
+
         DOTween.To(() => globalLight.intensity, x => globalLight.intensity = x, 0f, lightFadeDuration).SetEase(Ease.OutQuad);
         DOTween.To(() => pointLight.intensity, x => pointLight.intensity = x, 1f, lightFadeDuration).SetEase(Ease.OutQuad);
         lightBeam.DOFade(30f, lightFadeDuration);

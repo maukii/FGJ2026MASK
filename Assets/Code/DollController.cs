@@ -57,7 +57,8 @@ public class DollController : MonoBehaviour
             OnWrongDollKicked?.Invoke();
         }
         
-        Instantiate(explosionParticle, targetPoints[doll.DollIndex].position + Vector3.up * particleOffset, Quaternion.identity);
+        Vector3 particlePosition = new Vector3(targetPoints[doll.DollIndex].position.x, targetPoints[doll.DollIndex].position.y + particleOffset, -1.75f);
+        Instantiate(explosionParticle, particlePosition, Quaternion.identity);
         Destroy(doll.gameObject);
     }
 
