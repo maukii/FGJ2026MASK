@@ -147,5 +147,12 @@ public class DollController : MonoBehaviour
 
             Destroy(doll.gameObject);
         }
-    } 
+    }
+
+    void OnDestroy()
+    {
+        Boot.OnKickAnimationFinished -= OnKickFinished;
+        Boot.OnDollKicked -= OnDollKicked;
+        RoundTimer.OnRoundTimerRanOut -= HandleTimerEnded;
+    }
 }

@@ -877,7 +877,7 @@ MonoBehaviour:
   timerUI: {fileID: 928430898}
   timerLabel: {fileID: 2038071058}
   clockGraphic: {fileID: 1981053958}
-  startTimeSeconds: 180
+  startTimeSeconds: 60
 --- !u!4 &517991679
 Transform:
   m_ObjectHideFlags: 0

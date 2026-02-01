@@ -53,10 +53,22 @@ public class ScorePunch : MonoBehaviour
         );
 
         scoreLabel.SetText($"{score}");
+        Score.lastScore = score;
     }
 
     private void Start()
     {
         scoreLabel.SetText("");
     }
+
+    void OnDestroy()
+    {
+        DollController.OnCorrectDollKicked -= OnCorrectDollKicked;
+        DollController.OnTutorialCompleted -= OnTutorialCompleted;
+    }
+}
+
+public static class Score
+{
+    public static int lastScore;
 }

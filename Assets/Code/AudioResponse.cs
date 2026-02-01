@@ -30,4 +30,10 @@ public class AudioResponse : MonoBehaviour
     {
         AudioSource.PlayClipAtPoint(wrongDollAudio, Vector3.zero);
     }
+
+    void OnDestroy()
+    {
+        DollController.OnCorrectDollKicked -= OnCorrectDollKicked;
+        DollController.OnWrongDollKicked -= OnWrongDollKicked;
+    }
 }
