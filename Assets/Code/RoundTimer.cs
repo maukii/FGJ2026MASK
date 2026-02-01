@@ -1,4 +1,5 @@
 using DG.Tweening;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,6 +9,7 @@ public class RoundTimer : MonoBehaviour
     public static event System.Action<int> OnRoundTimerReset;
 
     [SerializeField] private GameObject timerUI;
+    [SerializeField] private TextMeshProUGUI scoreLabel;
     [SerializeField] private Slider roundTimerSlider;
     [SerializeField] private Image fillImage;
     [SerializeField] private int roundTimeInSeconds = 10;
@@ -56,6 +58,11 @@ public class RoundTimer : MonoBehaviour
             .SetEase(Ease.Linear)
             .OnUpdate(CheckDangerZone)
             .OnComplete(TimerExpired);
+    }
+
+    void Update()
+    {
+        scoreLabel.SetText($"+{Mathf.RoundToInt(roundTimerSlider.value)}");
     }
 
     private void TimerExpired()
