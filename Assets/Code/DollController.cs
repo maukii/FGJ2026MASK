@@ -87,7 +87,7 @@ public class DollController : MonoBehaviour
         List<Doll> dolls = new List<Doll>();
 
         currentImposterIndex = UnityEngine.Random.Range(0, 4);
-        int headIndex = UnityEngine.Random.Range(0, 5);
+        int headIndex = UnityEngine.Random.Range(0, 8);
 
         for (int i = 0; i < spawnPoints.Count; i++)
         {

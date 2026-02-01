@@ -26,7 +26,7 @@ public class Boot : MonoBehaviour
     public int BootHoverIndex => bootPositionIndex;
     private int bootPositionIndex = 0;
     private Tween tween;
-    private bool canKick = false;
+    public bool canKick = false;
 
 
     private void Awake()
@@ -79,7 +79,7 @@ public class Boot : MonoBehaviour
 
     public void OnKickAnimationCompleted()
     {
-        beltAnimator.SetTrigger("Roll");
+        if (beltAnimator != null) beltAnimator.SetTrigger("Roll");
         OnKickAnimationFinished?.Invoke();
     }
 
