@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
-    public event Action OnGameOver;
-
     [SerializeField] private GameTimer gameTimer;
     [SerializeField] private RoundTimer roundTimer;
     [SerializeField] private Light2D globalLight;
@@ -29,6 +28,7 @@ public class GameController : MonoBehaviour
 
         DollController.OnTutorialCompleted += TutorialCompleted;
         DollController.OnWrongDollKicked += LoseLife;
+        RoundTimer.OnRoundTimerRanOut += LoseLife;
     }
 
     private void LoseLife()
@@ -45,7 +45,7 @@ public class GameController : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            OnGameOver?.Invoke();
+            SceneManager.LoadScene("GameOver");
         }
     }
 
@@ -54,7 +54,7 @@ public class GameController : MonoBehaviour
         tutorialCompleted = true;
 
         DOTween.To(() => globalLight.intensity, x => globalLight.intensity = x, 0f, lightFadeDuration).SetEase(Ease.OutQuad);
-        DOTween.To(() => pointLight.intensity, x => pointLight.intensity = x, 1f, lightFadeDuration).SetEase(Ease.OutQuad);
+        DOTween.To(() => pointLight.intensity, x => pointLight.intensity = x, 20f, lightFadeDuration).SetEase(Ease.OutQuad);
         lightBeam.DOFade(30f, lightFadeDuration);
         gameTimer.ShowAndStart();
         roundTimer.ShowAndStart();

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class RoundTimer : MonoBehaviour
 {
     public static event System.Action OnRoundTimerRanOut;
+    public static event System.Action<int> OnRoundTimerReset;
 
     [SerializeField] private GameObject timerUI;
     [SerializeField] private Slider roundTimerSlider;
@@ -61,6 +62,7 @@ public class RoundTimer : MonoBehaviour
     {
         roundTimerSlider.value = 0f;
         OnRoundTimerRanOut?.Invoke();
+        ResetTimer();
     }
 
     private void ResetTimer()
@@ -68,6 +70,9 @@ public class RoundTimer : MonoBehaviour
         if (!tutorialCompleted) return;
 
         KillTweens();
+
+        int timeLeft = Mathf.RoundToInt(roundTimerSlider.value);
+        OnRoundTimerReset?.Invoke(timeLeft);
 
         roundTimerSlider.value = roundTimeInSeconds;
 

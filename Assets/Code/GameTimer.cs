@@ -3,6 +3,7 @@ using TMPro;
 using System;
 using DG.Tweening;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameTimer : MonoBehaviour
 {
@@ -10,8 +11,6 @@ public class GameTimer : MonoBehaviour
     [SerializeField] private TextMeshProUGUI timerLabel;
     [SerializeField] private Image clockGraphic;
     [SerializeField] private int startTimeSeconds = 180;
-
-    public static event Action OnTimerRanOut;
 
     private bool isRunning;
     private int remainingSeconds;
@@ -63,8 +62,7 @@ public class GameTimer : MonoBehaviour
             remainingSeconds = 0;
             UpdateDisplay();
             StopTimer();
-            OnTimerRanOut?.Invoke();
-            return;
+            SceneManager.LoadScene("GameOver");
         }
 
         UpdateDisplay();

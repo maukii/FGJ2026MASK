@@ -35,12 +35,19 @@ public class DollController : MonoBehaviour
     {
         Boot.OnKickAnimationFinished += OnKickFinished;
         Boot.OnDollKicked += OnDollKicked;
+        RoundTimer.OnRoundTimerRanOut += HandleTimerEnded;
+    }
+
+    private void HandleTimerEnded()
+    {
+        AnimateExit(currentDolls);
+        currentDolls = SpawnDolls(tutorial);
+        AnimateEnter(currentDolls);
     }
 
     private void OnDollKicked(int dollIndex)
     {
         Doll doll = currentDolls[dollIndex];
-        Debug.Log("Result: " + (doll.IsImposter ? "success" : "failure"));
         
         if (doll.IsImposter && tutorial)
         {
@@ -81,9 +88,6 @@ public class DollController : MonoBehaviour
 
         currentImposterIndex = UnityEngine.Random.Range(0, 4);
         int headIndex = UnityEngine.Random.Range(0, 5);
-
-        Debug.Log("current imposter index: " + currentImposterIndex);
-        Debug.Log("head index: " + headIndex);
 
         for (int i = 0; i < spawnPoints.Count; i++)
         {

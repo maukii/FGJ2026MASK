@@ -33,6 +33,12 @@ public class Boot : MonoBehaviour
     {
         Instance = this;
         DollController.OnRerollCompleted += RerollCompleted;
+        RoundTimer.OnRoundTimerRanOut += OnRoundTimeEnded;
+    }
+
+    private void OnRoundTimeEnded()
+    {
+        canKick = false;
     }
 
     private void RerollCompleted()
@@ -53,24 +59,21 @@ public class Boot : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
             MoveRight();
-        
-        if (!canKick) return;
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) || Input.GetKeyDown(KeyCode.Space))
             TryKick();
     }
 
-    private void TryKick()
+    public void TryKick()
     {
+        if (!canKick) return;
+
         bootAnimator.SetTrigger("Kick");
         canKick = false;
     }
 
     public void OnKick()
     {
-        // check which index was kicked
-        // tell it to explode
-        // event if it was correct or incorrect choise
         OnDollKicked?.Invoke(bootPositionIndex);
     }
 
@@ -80,7 +83,7 @@ public class Boot : MonoBehaviour
         OnKickAnimationFinished?.Invoke();
     }
 
-    private void MoveLeft()
+    public void MoveLeft()
     {
         if (bootPositionIndex <= 0)
         {
@@ -95,7 +98,7 @@ public class Boot : MonoBehaviour
         AnimateToIndex();
     }
 
-    private void MoveRight()
+    public void MoveRight()
     {
         if (bootPositionIndex >= kickPositions.Count-1)
         {
