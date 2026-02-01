@@ -1491,6 +1491,7 @@ GameObject:
   - component: {fileID: 673138327}
   - component: {fileID: 673138326}
   - component: {fileID: 673138325}
+  - component: {fileID: 673138329}
   m_Layer: 5
   m_Name: MoveLeftButton
   m_TagString: Untagged
@@ -1628,6 +1629,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 673138323}
   m_CullTransparentMesh: 1
+--- !u!114 &673138329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673138323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7da7014f92bfee04fb789fbee3d6f880, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverAudio: {fileID: 8300000, guid: f4f50b82bd5c72245a9a3ddb3ccbe63e, type: 3}
 --- !u!1 &761322848
 GameObject:
   m_ObjectHideFlags: 0
@@ -2422,6 +2436,7 @@ GameObject:
   - component: {fileID: 1366385041}
   - component: {fileID: 1366385040}
   - component: {fileID: 1366385039}
+  - component: {fileID: 1366385043}
   m_Layer: 5
   m_Name: MoveRightButton
   m_TagString: Untagged
@@ -2559,6 +2574,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1366385037}
   m_CullTransparentMesh: 1
+--- !u!114 &1366385043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1366385037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7da7014f92bfee04fb789fbee3d6f880, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverAudio: {fileID: 8300000, guid: f4f50b82bd5c72245a9a3ddb3ccbe63e, type: 3}
 --- !u!1 &1384062718
 GameObject:
   m_ObjectHideFlags: 0
@@ -3115,6 +3143,7 @@ GameObject:
   - component: {fileID: 1805039142}
   - component: {fileID: 1805039141}
   - component: {fileID: 1805039144}
+  - component: {fileID: 1805039145}
   m_Layer: 5
   m_Name: KickButton
   m_TagString: Untagged
@@ -3251,6 +3280,19 @@ MonoBehaviour:
   duration: 0.2
   vibrato: 8
   elasticity: 0.5
+--- !u!114 &1805039145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805039139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7da7014f92bfee04fb789fbee3d6f880, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverAudio: {fileID: 8300000, guid: f4f50b82bd5c72245a9a3ddb3ccbe63e, type: 3}
 --- !u!1 &1913342363
 GameObject:
   m_ObjectHideFlags: 0

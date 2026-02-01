@@ -390,6 +390,7 @@ GameObject:
   - component: {fileID: 128008683}
   - component: {fileID: 128008685}
   - component: {fileID: 128008684}
+  - component: {fileID: 128008686}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -515,6 +516,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 128008682}
   m_CullTransparentMesh: 1
+--- !u!114 &128008686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128008682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7da7014f92bfee04fb789fbee3d6f880, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverAudio: {fileID: 8300000, guid: f4f50b82bd5c72245a9a3ddb3ccbe63e, type: 3}
 --- !u!1 &251792760
 GameObject:
   m_ObjectHideFlags: 0
@@ -1050,6 +1064,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7da7014f92bfee04fb789fbee3d6f880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoverAudio: {fileID: 8300000, guid: f4f50b82bd5c72245a9a3ddb3ccbe63e, type: 3}
 --- !u!114 &543165739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1219,6 +1234,7 @@ GameObject:
   - component: {fileID: 652949571}
   - component: {fileID: 652949570}
   - component: {fileID: 652949569}
+  - component: {fileID: 652949573}
   m_Layer: 5
   m_Name: KickButton
   m_TagString: Untagged
@@ -1355,6 +1371,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 652949567}
   m_CullTransparentMesh: 1
+--- !u!114 &652949573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 652949567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7da7014f92bfee04fb789fbee3d6f880, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverAudio: {fileID: 8300000, guid: f4f50b82bd5c72245a9a3ddb3ccbe63e, type: 3}
 --- !u!4 &659627699 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7431978270673329517, guid: f183a78d22d72744cac8ad66c410425b, type: 3}
@@ -1501,6 +1530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7da7014f92bfee04fb789fbee3d6f880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoverAudio: {fileID: 8300000, guid: f4f50b82bd5c72245a9a3ddb3ccbe63e, type: 3}
 --- !u!222 &673655285
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2139,6 +2169,7 @@ GameObject:
   - component: {fileID: 1085574508}
   - component: {fileID: 1085574507}
   - component: {fileID: 1085574506}
+  - component: {fileID: 1085574510}
   m_Layer: 5
   m_Name: MoveLeftButton
   m_TagString: Untagged
@@ -2275,6 +2306,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1085574504}
   m_CullTransparentMesh: 1
+--- !u!114 &1085574510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085574504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7da7014f92bfee04fb789fbee3d6f880, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverAudio: {fileID: 8300000, guid: f4f50b82bd5c72245a9a3ddb3ccbe63e, type: 3}
 --- !u!1 &1105161065
 GameObject:
   m_ObjectHideFlags: 0
@@ -2710,6 +2754,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7da7014f92bfee04fb789fbee3d6f880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoverAudio: {fileID: 8300000, guid: f4f50b82bd5c72245a9a3ddb3ccbe63e, type: 3}
 --- !u!114 &1230977756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2976,6 +3021,7 @@ GameObject:
   - component: {fileID: 1525643301}
   - component: {fileID: 1525643300}
   - component: {fileID: 1525643299}
+  - component: {fileID: 1525643303}
   m_Layer: 5
   m_Name: MoveRightButton
   m_TagString: Untagged
@@ -3112,6 +3158,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1525643297}
   m_CullTransparentMesh: 1
+--- !u!114 &1525643303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525643297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7da7014f92bfee04fb789fbee3d6f880, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverAudio: {fileID: 8300000, guid: f4f50b82bd5c72245a9a3ddb3ccbe63e, type: 3}
 --- !u!1 &1549702534
 GameObject:
   m_ObjectHideFlags: 0
@@ -3419,6 +3478,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7da7014f92bfee04fb789fbee3d6f880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoverAudio: {fileID: 8300000, guid: f4f50b82bd5c72245a9a3ddb3ccbe63e, type: 3}
 --- !u!114 &1908209740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3709,6 +3769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7da7014f92bfee04fb789fbee3d6f880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoverAudio: {fileID: 8300000, guid: f4f50b82bd5c72245a9a3ddb3ccbe63e, type: 3}
 --- !u!1 &2100528864
 GameObject:
   m_ObjectHideFlags: 0

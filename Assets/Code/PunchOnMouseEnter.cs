@@ -4,6 +4,7 @@ using UnityEngine.EventSystems;
 
 public class PunchOnMouseEnter : MonoBehaviour, IPointerEnterHandler
 {
+    [SerializeField] AudioClip hoverAudio;
     RectTransform rectTransform;
 
     void Awake()
@@ -18,5 +19,6 @@ public class PunchOnMouseEnter : MonoBehaviour, IPointerEnterHandler
         rectTransform.DOPunchPosition(Vector3.one * 0.25f, 0.1f);
         rectTransform.DOPunchRotation((Random.value > 0.5f ? Vector3.forward : Vector3.back) * 8f, .15f);
         rectTransform.DOPunchScale(Vector3.one * 0.25f, 0.2f);
+        if (hoverAudio) AudioSource.PlayClipAtPoint(hoverAudio, Vector3.zero);
     }
 }
