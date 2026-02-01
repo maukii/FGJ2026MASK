@@ -48,6 +48,7 @@ public class MainMenuController : MonoBehaviour
             loadGameplay = true;
             Vector3 particlePosition = new Vector3(startGameDoll.transform.position.x, startGameDoll.transform.position.y + particleOffset, -1.75f);
             Instantiate(dollExplosionParticle, particlePosition, Quaternion.identity);
+            AudioSource.PlayClipAtPoint(explostionAudio, Vector3.zero);
             Destroy(startGameDoll.gameObject);
         }
         else
@@ -65,5 +66,11 @@ public class MainMenuController : MonoBehaviour
         boot.canKick = true;
         startGameDoll.Initialize(0, Random.Range(0, 8), false, true);
         creditsDoll.Initialize(1, Random.Range(0, 8), false, true);
+    }
+
+    void OnDestroy()
+    {
+        Boot.OnDollKicked -= OnDollKicked;
+        Boot.OnKickAnimationFinished -= OnKickFinished;
     }
 }

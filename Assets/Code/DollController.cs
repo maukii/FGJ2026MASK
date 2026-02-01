@@ -11,7 +11,6 @@ public class DollController : MonoBehaviour
     public static event Action OnRerollCompleted;
     public static event Action OnTutorialCompleted;
 
-    [SerializeField] private AudioClip bootMoveAudio;
     [SerializeField] private AudioClip dollKickedAudio;
     [SerializeField] private AudioClip conveyerMoveAudio;
 

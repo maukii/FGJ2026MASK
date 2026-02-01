@@ -1435,9 +1435,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b886944045da48c4eaf57ea1fe27c320, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bootMoveAudio: {fileID: 0}
-  dollKickedAudio: {fileID: 0}
-  conveyerMoveAudio: {fileID: 0}
+  dollKickedAudio: {fileID: 8300000, guid: 705fca091062e8c4d92deb1e881f6257, type: 3}
+  conveyerMoveAudio: {fileID: 8300000, guid: 0be4856736f3ca04db179d46d9b04ccc, type: 3}
   particleOffset: 3
   explosionParticle: {fileID: 2180759309196565242, guid: 6f6feb192898c4049ac9be008b839b16, type: 3}
   dollPrefab: {fileID: 1387744271374554102, guid: f183a78d22d72744cac8ad66c410425b, type: 3}
@@ -4079,6 +4078,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba7555b98fd5a4340bed459fad3c2aff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bootMoveAudio: {fileID: 8300000, guid: 3a221531bf0d07e43b0197fed7b50e3b, type: 3}
   bootParent: {fileID: 13272819}
   bootAnimator: {fileID: 470439602}
   beltAnimator: {fileID: 1063344899}

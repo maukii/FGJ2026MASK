@@ -7,6 +7,7 @@ public class Boot : MonoBehaviour
 {
     public static Boot Instance { get; private set; }
 
+    [SerializeField] private AudioClip bootMoveAudio;
     [SerializeField] private Transform bootParent;
     [SerializeField] private Animator bootAnimator;
     [SerializeField] private Animator beltAnimator;
@@ -91,6 +92,7 @@ public class Boot : MonoBehaviour
             return;
         }
 
+        AudioSource.PlayClipAtPoint(bootMoveAudio, Vector3.zero);
         bootPositionIndex--;
         bootPositionIndex = Mathf.Clamp(bootPositionIndex, 0, kickPositions.Count-1);
         OnBootMoved?.Invoke(bootPositionIndex);
@@ -106,6 +108,7 @@ public class Boot : MonoBehaviour
             return;
         }
 
+        AudioSource.PlayClipAtPoint(bootMoveAudio, Vector3.zero);
         bootPositionIndex++;
         bootPositionIndex = Mathf.Clamp(bootPositionIndex, 0, kickPositions.Count-1);
         OnBootMoved?.Invoke(bootPositionIndex);

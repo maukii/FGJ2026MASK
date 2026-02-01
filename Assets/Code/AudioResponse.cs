@@ -13,7 +13,7 @@ public class AudioResponse : MonoBehaviour
 
     private void OnWrongDollKicked()
     {
-        Invoke(nameof(DelayedRightAudio), 0.5f);
+        Invoke(nameof(DelayedWrongAudio), 0.5f);
     }
 
     private void DelayedRightAudio()
@@ -23,7 +23,7 @@ public class AudioResponse : MonoBehaviour
 
     private void OnCorrectDollKicked()
     {
-        Invoke(nameof(DelayedWrongAudio), 0.5f);
+        Invoke(nameof(DelayedRightAudio), 0.5f);
     }
 
     private void DelayedWrongAudio()
