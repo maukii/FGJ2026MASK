@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4589195724137552388}
   - component: {fileID: 2180759309196565242}
   - component: {fileID: 2454314360383320663}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Particle_Explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5143,7 +5143,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5164,7 +5164,7 @@ ParticleSystemRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 999
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0
@@ -5208,7 +5208,7 @@ GameObject:
   - component: {fileID: 5455816257026767825}
   - component: {fileID: 207502907047093777}
   - component: {fileID: 1455262759028993952}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: torso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10037,7 +10037,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10058,7 +10058,7 @@ ParticleSystemRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 999
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0
@@ -10102,7 +10102,7 @@ GameObject:
   - component: {fileID: 73438047636124204}
   - component: {fileID: 7683276064640060952}
   - component: {fileID: 2755949399427962777}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14931,7 +14931,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14952,7 +14952,7 @@ ParticleSystemRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 999
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0
@@ -14996,7 +14996,7 @@ GameObject:
   - component: {fileID: 3616549981219716811}
   - component: {fileID: 2634879971033223493}
   - component: {fileID: 3293384633927417147}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: bitsandbots
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19827,7 +19827,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19848,7 +19848,7 @@ ParticleSystemRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 999
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0
