@@ -2148,6 +2148,14 @@ MonoBehaviour:
   lightFadeDuration: 0.25
   lightBeam: {fileID: 1680442822}
   pointLight: {fileID: 534822109}
+  healthParentGraphics:
+  - {fileID: 391750128}
+  - {fileID: 1435882249}
+  - {fileID: 1426495306}
+  healthGraphics:
+  - {fileID: 430472640}
+  - {fileID: 832186081}
+  - {fileID: 260706696}
 --- !u!4 &1652813697
 Transform:
   m_ObjectHideFlags: 0
@@ -2178,7 +2186,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1655611734
 RectTransform:
   m_ObjectHideFlags: 0
